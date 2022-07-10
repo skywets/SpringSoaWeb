@@ -15,14 +15,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    @Size@Size(min=2, message = "At least 5 characters")
+  //  @Size@Size(min=2, message = "At least 5 characters")
+
     private Long id;
-    @Column(name = "name", nullable = false)
-    @Size@Size(min=2, message = "At least 5 characters")
-    private String name;
+
+    @Column(name = "username", nullable = false)
+  //  @Size@Size(min=2, message = "At least 5 characters")
+    private String userName;
+
     @Column(name = "password")
-    @Size@Size(min=2, message = "At least 5 characters")
+   // @Size@Size(min=2, message = "At least 5 characters")
     private String password;
+
     @Transient
     private String passwordConfirm;
 }
